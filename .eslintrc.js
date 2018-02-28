@@ -23,6 +23,6 @@ module.exports = {
         'eol-last': [2],
         'no-trailing-spaces': [2],
         'arrow-parens': 2,
-
+        'max-len': [1, 120, 1, {'ignore-urls':true}]
     }
 }

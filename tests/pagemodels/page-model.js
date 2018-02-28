@@ -9,8 +9,13 @@ export default class SearchResultPage {
    * @contructor
    */
   constructor() {
-    this.queryBox = new Selector('input[name="query"]');
-    this.queryButton = new Selector('button[data-identifier="searchButton"]');
-    this.facets = new Selector('form[data-identifier="facetnavigation-form"]');
+    this.queryBox = Selector('input[name="query"]');
+    this.queryButton = Selector('button[data-identifier="searchButton"]');
+    this.facets = Selector('form[data-identifier="facetnavigation-form"]');
+    
+    // todo: fix
+    this.brandFilters = Selector('#facet2');
+    this.secondFilter = Selector('#facet2element2');
+    this.searchResultHeader = Selector('h1[data-identifier="srp-headline"]');
   }
 };

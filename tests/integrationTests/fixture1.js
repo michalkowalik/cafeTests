@@ -1,4 +1,4 @@
-import {ClientFunction} from 'testcafe';
+import {ClientFunction, Selector} from 'testcafe';
 import SearchResultPage from '../pagemodels/page-model';
 
 /**
@@ -24,4 +24,12 @@ test('Load SRP Page', async (t) => {
     .click(page.queryButton)
     .expect(page.queryBox.value).eql('dab')
     .expect(page.facets.exists).ok();
+});
+
+test('Apply filter on SRP Page', async (t) => {
+    await t
+    .typeText(page.queryBox, 'dab')
+    .click(page.queryButton)
+    .click(page.brandFilters)  
+    .expect(page.searchResultHeader.innerText).contains('7 Produkte');  
 });
