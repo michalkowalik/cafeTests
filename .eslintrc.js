@@ -25,4 +25,4 @@ module.exports = {
         'arrow-parens': 2,
         'max-len': [1, 120, 1, {'ignore-urls':true}]
     }
-}
+} 
