@@ -31,5 +31,5 @@ test('Apply filter on SRP Page', async (t) => {
     .typeText(page.queryBox, 'dab')
     .click(page.queryButton)
     .click(page.brandFilters)  
-    .expect(page.searchResultHeader.innerText).contains('7 Produkte');  
+    .expect(page.searchResultHeader.innerText).contains('23 Produkte');  
 });
